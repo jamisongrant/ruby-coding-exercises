@@ -14,6 +14,7 @@ require 'rspec'
 # </html>
 
 def html_generator title
+  return "/#{title}/"
 end
 
 describe 'HTML generator' do

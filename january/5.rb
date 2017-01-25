@@ -1,7 +1,10 @@
 require 'rspec'
 
 def generate_alphabet
+  p(*"a".."z")
 end
+
+
 
 describe 'Alphabet generator' do
   it 'generates the full alphabet' do
