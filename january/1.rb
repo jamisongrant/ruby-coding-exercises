@@ -1,6 +1,7 @@
 require 'rspec'
 
 def title_creator title
+  return "<h1>#{title}</h1>"
 end
 
 describe 'HTML h1 converter' do
