@@ -1,7 +1,14 @@
 require 'rspec'
+require 'bigdecimal'
+
+val_1 = "10.0987345897234093284023"
+val_2 = "42.0987345897234093284023"
 
 def large_number_processor num_1, num_2
+  (BigDecimal.new(num_1) * BigDecimal.new(num_2)).to_s("F")
 end
+
+p large_number_processor(val_1, val_2)
 
 describe 'Large number processing' do
   it 'accurately multiplies 2 large numbers' do

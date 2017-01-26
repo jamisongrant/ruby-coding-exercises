@@ -3,11 +3,16 @@ require 'rspec'
 menu = {
   'appetizers': ['Chips', 'Quesadillas', 'Flatbread'],
   'entrees': ['Steak', 'Chicken', 'Lobster'],
-  'dessers': ['Cheesecake', 'Cake', 'Cupcake']
+  'desserts': ['Cheesecake', 'Cake', 'Cupcake']
 }
 
 def daily_special hash
+  menu_items = []
+  hash.map { |category| menu_items << category.last }.flatten.sample
 end
+
+# menu_items = []
+# p menu.map { |category| menu_items << category.last }.flatten.sample
 
 describe 'Nested hash element selector' do
   it 'selected a random element from the set of nested arrays' do
