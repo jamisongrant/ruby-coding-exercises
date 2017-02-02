@@ -2,6 +2,11 @@ require 'rspec'
 
 class Array
   def odd_selector
+    odds = []
+    self.each do |e|
+      odds << e if e.odd?
+    end
+    odds
   end
 end
 

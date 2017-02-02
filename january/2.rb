@@ -1,21 +1,38 @@
 require 'rspec'
 
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Title Goes Here</title>
+</head>
+
+<body>
+</body>
+</html>
+
+def html_generator title
+  return "/#{title}/"
+end
+
+# def html_generator title
+# <<HTML
 # <!doctype html>
 
 # <html lang="en">
 # <head>
 #   <meta charset="utf-8">
-# 
-#   <title>Title Goes Here</title>
+
+#   <title> #{ title } </title>
 # </head>
-# 
+
 # <body>
 # </body>
 # </html>
-
-def html_generator title
-  return "/#{title}/"
-end
+# HTML
+# end
 
 describe 'HTML generator' do
   it 'allows for a dynamic title' do

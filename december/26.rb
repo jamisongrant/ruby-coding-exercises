@@ -11,6 +11,11 @@ def leap_years
   bear
 end
 
+# years.each do |year|
+#   current_year = Date.new(year)
+#   leap_years << year if current_year.leap?
+# end
+
 
 
 describe 'Leap year calculation' do
