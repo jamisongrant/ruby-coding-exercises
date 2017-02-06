@@ -1,6 +1,12 @@
 require 'rspec'
 
 def title_builder headers, data
+  hash = Hash.new
+  headers.each_with_index do |header, index|
+    hash[header] = data[index]
+  end
+
+  hash
 end
 
 describe 'Hash builder' do
@@ -12,4 +18,3 @@ describe 'Hash builder' do
                                               "rating"=>5})
   end
 end
-
